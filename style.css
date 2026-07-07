@@ -1,0 +1,367 @@
+/* ===========================
+   FingerprintConvert
+   Main Styles
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#ffffff;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#111827;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo-box{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo{
+width:60px;
+height:60px;
+object-fit:contain;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.navbar ul li a{
+font-weight:bold;
+transition:.3s;
+}
+
+.navbar ul li a:hover{
+color:#3b82f6;
+}
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px 8%;
+gap:40px;
+flex-wrap:wrap;
+background:linear-gradient(135deg,#111827,#1e3a8a);
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:20px;
+color:#d1d5db;
+margin-bottom:30px;
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+}
+
+.hero-image img{
+max-width:500px;
+margin:auto;
+}
+
+button{
+padding:14px 30px;
+background:#2563eb;
+border:none;
+border-radius:10px;
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#1d4ed8;
+transform:translateY(-2px);
+}
+
+/* ===========================
+   Sections
+=========================== */
+
+.section-title{
+text-align:center;
+font-size:36px;
+margin:60px 0 30px;
+color:#60a5fa;
+}
+
+.services,
+.why-us,
+.statistics,
+.supported-formats,
+.faq{
+padding:20px 8% 60px;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+text-align:center;
+transition:.3s;
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:90px;
+height:90px;
+margin:0 auto 20px;
+object-fit:contain;
+}
+
+.card h3{
+margin-bottom:15px;
+color:#60a5fa;
+}
+
+.card p{
+margin-bottom:20px;
+color:#cbd5e1;
+}
+
+/* ===========================
+   Forms
+=========================== */
+
+input,
+select,
+textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+background:#0f172a;
+color:white;
+font-size:16px;
+outline:none;
+}
+
+textarea{
+resize:vertical;
+min-height:140px;
+}
+
+input::placeholder,
+textarea::placeholder{
+color:#94a3b8;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+background:#111827;
+padding:50px 20px;
+text-align:center;
+margin-top:60px;
+border-top:2px solid #2563eb;
+}
+
+.footer-content h3{
+margin:15px 0;
+font-size:28px;
+}
+
+.footer-content p{
+margin:10px 0;
+color:#cbd5e1;
+}
+
+.footer-content a{
+color:#60a5fa;
+}
+
+.footer-content a:hover{
+text-decoration:underline;
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.hero,
+.card,
+.section-title{
+animation:fadeIn .8s ease;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media (max-width:992px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:50px 20px;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+.hero-text p{
+font-size:18px;
+}
+
+.navbar{
+flex-direction:column;
+gap:20px;
+}
+
+.navbar ul{
+justify-content:center;
+}
+
+}
+
+@media (max-width:768px){
+
+.logo{
+width:55px;
+height:55px;
+}
+
+.navbar ul{
+flex-direction:column;
+align-items:center;
+gap:15px;
+}
+
+.hero-text h1{
+font-size:32px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+button{
+width:100%;
+}
+
+}
+
+@media (max-width:480px){
+
+.hero{
+padding:40px 15px;
+}
+
+.hero-text h1{
+font-size:28px;
+}
+
+.hero-text p{
+font-size:16px;
+}
+
+.logo{
+width:45px;
+height:45px;
+}
+
+.footer-content h3{
+font-size:22px;
+}
+
+}
+
+/* ===========================
+   Scroll Bar
+=========================== */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+background:#2563eb;
+border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#3b82f6;
+}
